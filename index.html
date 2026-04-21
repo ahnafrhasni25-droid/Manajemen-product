@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DataFlow | Premium Analytics SaaS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#31447b",
+                    "surface-container-high": "#1f2a3d",
+                    "on-error": "#690005",
+                    "tertiary-container": "#bc4800",
+                    "tertiary": "#ffb596",
+                    "on-surface": "#d7e3fc",
+                    "surface-container": "#142032",
+                    "on-error-container": "#ffdad6",
+                    "secondary-container": "#33467e",
+                    "primary-fixed": "#dbe1ff",
+                    "on-primary-fixed": "#00174b",
+                    "on-tertiary-fixed-variant": "#7d2d00",
+                    "error-container": "#93000a",
+                    "surface-tint": "#b4c5ff",
+                    "on-primary-container": "#eeefff",
+                    "outline": "#8d90a0",
+                    "surface-container-lowest": "#030e20",
+                    "primary-container": "#2563eb",
+                    "background": "#071325",
+                    "on-tertiary-container": "#ffede6",
+                    "surface-dim": "#071325",
+                    "inverse-surface": "#d7e3fc",
+                    "on-surface-variant": "#c3c6d7",
+                    "on-primary": "#002a78",
+                    "on-tertiary-fixed": "#360f00",
+                    "tertiary-fixed-dim": "#ffb596",
+                    "surface-variant": "#2a3548",
+                    "primary": "#b4c5ff",
+                    "inverse-on-surface": "#253144",
+                    "on-tertiary": "#581e00",
+                    "on-secondary": "#182d63",
+                    "on-secondary-fixed": "#00174b",
+                    "tertiary-fixed": "#ffdbcd",
+                    "secondary": "#b4c5ff",
+                    "surface-container-low": "#101c2e",
+                    "on-background": "#d7e3fc",
+                    "on-secondary-container": "#a4b6f5",
+                    "surface": "#071325",
+                    "error": "#ffb4ab",
+                    "surface-bright": "#2e394d",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "inverse-primary": "#0053db",
+                    "secondary-fixed-dim": "#b4c5ff",
+                    "on-primary-fixed-variant": "#003ea8",
+                    "outline-variant": "#434655",
+                    "secondary-fixed": "#dbe1ff",
+                    "surface-container-highest": "#2a3548"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<link rel="stylesheet" href="css/style.css">
+  </head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-white">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#071325]/70 backdrop-blur-xl dark:bg-[#071325]/70">
+<nav class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-blue-600 dark:text-blue-500 text-3xl" data-icon="waves">waves</span>
+<span class="text-xl font-bold tracking-tight text-white dark:text-white">DataFlow</span>
+</div>
+<button class="bg-primary-container hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 active:scale-95 shadow-lg shadow-blue-900/20">
+                Get Started
+            </button>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-32 pb-20 px-6 overflow-hidden bg-gradient-to-b from-surface via-surface-container-low to-surface">
+<!-- Decorative background elements -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none">
+<div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary-container/10 blur-[120px] rounded-full"></div>
+<div class="absolute bottom-0 right-[-5%] w-[40%] h-[40%] bg-blue-900/20 blur-[100px] rounded-full"></div>
+</div>
+<div class="relative max-w-7xl mx-auto text-center">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container/30 text-on-secondary-container text-xs font-medium mb-8 border border-outline-variant/10">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse shadow-[0_0_8px_rgba(37,99,235,0.8)]"></span>
+                    Now with AI-Powered Forecasting
+                </div>
+<h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-6 leading-[1.1]">
+                    Transform Your Data <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">Into Decisions</span>
+</h1>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+                    Enterprise-grade insights delivered through a unified intelligence layer. Scale your infrastructure without the complexity of traditional analytics.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+<button class="w-full sm:w-auto px-8 py-4 bg-primary-container text-white font-bold rounded-xl shadow-2xl shadow-blue-900/40 hover:scale-[1.02] transition-transform">
+                        Launch Dashboard
+                    </button>
+<button class="w-full sm:w-auto px-8 py-4 bg-transparent border border-outline-variant/20 text-white font-semibold rounded-xl hover:bg-surface-container-high transition-colors">
+                        View Documentation
+                    </button>
+</div>
+<!-- Hero Image Placeholder -->
+<div class="mt-16 mx-auto max-w-5xl rounded-2xl overflow-hidden shadow-2xl border border-white/5 bg-surface-container-low p-2">
+<img alt="Data Analytics Interface" class="w-full h-auto rounded-xl grayscale-[0.5] contrast-[1.1]" data-alt="Modern dark mode software dashboard with complex data visualizations, blue neon charts, and futuristic analytical interface elements" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSv-v6rpFgwfAwXOk4QKYBY_14m4mOoG01leFI4tJerijD-F6mBwXZexs2lkooWUnWLIEClE3Z2LarkfpuhU_oEfnExO1-ZQ0NhSoC1cucEAeoW4RXfP83VTwAjl2WG8pcSc0m9uA6gv5l30lQBfc7N75GLddet3M8p6_SKXZJa7kY4LVawne75PWfRJzHWwK08HRWqNBbLifgu0dqx3SfOeXIwVuyklgK4uDXavMKCK9H2V-_RB1l6zmveYwEnoe1BFtASP-AmpcF"/>
+</div>
+</div>
+</section>
+<!-- Social Proof -->
+<section class="py-12 bg-surface">
+<div class="max-w-7xl mx-auto px-6">
+<p class="text-center text-slate-500 text-sm font-semibold tracking-widest uppercase mb-10">Trusted by Industry Leaders</p>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-8 items-center opacity-40 grayscale contrast-125">
+<div class="flex justify-center">
+<img alt="Logo" class="h-6 invert" data-alt="minimalist tech company logo monochrome" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiwPx646oo4bbt8bUyOISXI975jgBuMzkRLa0JAkzFfh2HTBt8oFEjgguzI2GDN7Wx3TtcICZvn3p2m-3YvtocLKgPmouOJZr-2vn7kXfMQzfTqnE2VKFzq-OQZA0WsyAJjtSR7YF4iu9nvD99beSyc7vGWyoo9kIxn3CqrCPDddwLYbcM_c5zXhHkakz9sJ_Z8VdFEj-6TcZ4MX-1CkXVUgyXYbLi66Aez3BSkXKvSNAMvKEZYu_S6K9Yvh7_-w3sgVBG6qIMdRQD"/>
+</div>
+<div class="flex justify-center">
+<img alt="Logo" class="h-6 invert" data-alt="minimalist tech company logo monochrome" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKs-ewTgCa8gHOoW0wT9T2B73xNpdRL7iIURKphmQMQ0boZqfKThHVZ6GJq931mKScPheDjfAV1UUVMDl1DCJjh28MSjOJdjvjJUnDVkIX1nfN5bes14RMKto67wjWK80CoW8e-3uhWflwFB8bjzVMdNU-ULmz-lTvZCF4sa-NBiNf2FwiHmL-aRGVS5y2vxH2VWhZui40EUZW4H-Je0lPP4xh-lnZs-fHS17CNkD0ePSXw4BTd8c97R1SqM8LnpSVwUY0BBaLDllI"/>
+</div>
+<div class="flex justify-center">
+<img alt="Logo" class="h-6 invert" data-alt="minimalist tech company logo monochrome" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjo84xEOceYDoQn4Nlgrfb3eRv40-ywkPb-XJBXjuV9ClRJNqVYJ-zSIXFzzfOqF23ujgh8FJ-6lcc-8ss2_yYbUZVraDZ3eBfJtrtV63wNRnS1-Ff3uhknvStsgjYkWROGfjveQBo3JeEtGXukdjSqcGEBVxpFAWE95qPN-iOtHf0Wkve_RMLOcCppi26OCKzXD72EKf3E8kKq-urW7mjctxnXAhynsMwdsk9VclaOf2ylJ1djIIJHk79A2i67Aa1Ql6WhTC8Z9bH"/>
+</div>
+<div class="flex justify-center">
+<img alt="Logo" class="h-6 invert" data-alt="minimalist tech company logo monochrome" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjoO__E3kVuJvY3sVhHHrbF62ZXJtVRi7_kU5VjzbGP4ZaPuShmDmr3Vm7xNA7JViyP1jW1XXRD6eeUDrAJBwUeObBL-2rNrnkPy-cQoDL86P6Gr92a07jPhzo0GBFpyIwPqNA38WqUJtFOgZQMdiT15hGmaLBJ5eItVuwKFi_LORojV1XVoovimYRfiAApEPEX9_oQ8Tv6hzLzQ8nA2hioAz-YFMiOA0z8APJe4Habbg1AGrtYhVZKpd_2lG65X38f9xIusrkYDEK"/>
+</div>
+<div class="flex justify-center">
+<img alt="Logo" class="h-6 invert" data-alt="minimalist tech company logo monochrome" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUVPrkiuMPIVy9pGD5ZZdBZVJzDq6Cz16xWeBfOVCZJj5G1ejgucEUR7Q5c7o_0wxAfEgKYFurDWxZaixgzzowBwxBZ7vew64m48Nj8Su8OXa3XlAaPd01RfIIM7-7v3JTDf5tvg1a8IsPrhKcTrUYrsRycgV_3Uosvgh8fkTIJz1xYeuB_IcZi-KiZwdkTmtrSLUvmjnxitOCGrTtY8iHoRGoAa6_Sg_E53enUi19DSCSmvKilaAhyHCBwmYWC3i8MhOEymkOQ2rW"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Feature Highlights -->
+<section class="py-24 px-6 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Precision-Engineered Performance</h2>
+<p class="text-on-surface-variant max-w-xl mx-auto">Optimized for high-velocity environments where every millisecond of data latency counts.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Feature Card 1 -->
+<div class="bg-surface-container-high p-8 rounded-2xl transition-all duration-300 hover:translate-y-[-8px]">
+<div class="w-12 h-12 rounded-xl bg-primary-container/20 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="monitoring">monitoring</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-3">Real-time Analytics</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Stream data directly from your infrastructure with sub-second latency and instant visualization.</p>
+</div>
+<!-- Feature Card 2 -->
+<div class="bg-surface-container-high p-8 rounded-2xl transition-all duration-300 hover:translate-y-[-8px]">
+<div class="w-12 h-12 rounded-xl bg-primary-container/20 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-3">AI Predictions</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Leverage machine learning models to forecast trends and identify anomalies before they impact ROI.</p>
+</div>
+<!-- Feature Card 3 -->
+<div class="bg-surface-container-high p-8 rounded-2xl transition-all duration-300 hover:translate-y-[-8px]">
+<div class="w-12 h-12 rounded-xl bg-primary-container/20 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="dashboard_customize">dashboard_customize</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-3">Custom Reports</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Build beautiful, branded reporting templates with our drag-and-drop editorial engine.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Table -->
+<section class="py-24 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Scalable Pricing for Every Stage</h2>
+<p class="text-on-surface-variant">Simple, transparent plans designed to grow with your data needs.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8 items-end">
+<!-- Starter -->
+<div class="bg-surface-container-low p-10 rounded-2xl border border-outline-variant/10">
+<h3 class="text-lg font-semibold text-white mb-2">Starter</h3>
+<div class="flex items-baseline gap-1 mb-6">
+<span class="text-4xl font-bold text-white">$49</span>
+<span class="text-on-surface-variant">/mo</span>
+</div>
+<ul class="space-y-4 mb-8 text-sm text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle" data-weight="fill">check_circle</span> Up to 1M monthly events</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle" data-weight="fill">check_circle</span> 3 user accounts</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle" data-weight="fill">check_circle</span> Standard support</li>
+</ul>
+<button class="w-full py-3 rounded-lg border border-outline-variant/30 text-white font-medium hover:bg-surface-container-high transition-colors">Choose Starter</button>
+</div>
+<!-- Pro (Featured) -->
+<div class="bg-surface-container-high p-10 rounded-2xl border-2 border-primary-container relative shadow-2xl shadow-blue-900/20 scale-105">
+<div class="absolute top-0 right-8 -translate-y-1/2 bg-primary-container text-white text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full">Most Popular</div>
+<h3 class="text-lg font-semibold text-white mb-2">Pro</h3>
+<div class="flex items-baseline gap-1 mb-6">
+<span class="text-4xl font-bold text-white">$199</span>
+<span class="text-on-surface-variant">/mo</span>
+</div>
+<ul class="space-y-4 mb-8 text-sm text-on-surface-variant">
+<li class="flex items-center gap-2 text-white font-medium"><span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle" data-weight="fill">check_circle</span> Unlimited monthly events</li>
+<li class="flex items-center gap-2 text-white font-medium"><span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle" data-weight="fill">check_circle</span> 15 user accounts</li>
+<li class="flex items-center gap-2 text-white font-medium"><span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle" data-weight="fill">check_circle</span> AI-powered forecasting</li>
+<li class="flex items-center gap-2 text-white font-medium"><span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle" data-weight="fill">check_circle</span> Priority 24/7 support</li>
+</ul>
+<button class="w-full py-3 rounded-lg bg-primary-container text-white font-bold hover:bg-blue-600 shadow-lg shadow-blue-900/40 transition-colors">Start Pro Trial</button>
+</div>
+<!-- Enterprise -->
+<div class="bg-surface-container-low p-10 rounded-2xl border border-outline-variant/10">
+<h3 class="text-lg font-semibold text-white mb-2">Enterprise</h3>
+<div class="flex items-baseline gap-1 mb-6">
+<span class="text-4xl font-bold text-white">Custom</span>
+</div>
+<ul class="space-y-4 mb-8 text-sm text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle" data-weight="fill">check_circle</span> Custom deployment</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle" data-weight="fill">check_circle</span> Dedicated success manager</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle" data-weight="fill">check_circle</span> Custom SLA &amp; Security</li>
+</ul>
+<button class="w-full py-3 rounded-lg border border-outline-variant/30 text-white font-medium hover:bg-surface-container-high transition-colors">Contact Sales</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#101C2E] dark:bg-[#101C2E] w-full py-16 px-8 border-t border-white/5">
+<div class="grid grid-cols-2 md:grid-cols-5 gap-8 max-w-7xl mx-auto">
+<div class="col-span-2">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-blue-500 text-2xl" data-icon="waves">waves</span>
+<span class="text-lg font-bold text-white">DataFlow</span>
+</div>
+<p class="text-slate-500 text-sm max-w-xs mb-4">The new standard for enterprise data intelligence and analytical decision-making.</p>
+<p class="text-slate-500 text-xs mt-auto">© 2024 DataFlow. All rights reserved.</p>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-white text-sm font-bold">Product</span>
+<a class="text-slate-500 text-sm hover:text-blue-400 transition-colors" href="#">Features</a>
+<a class="text-slate-500 text-sm hover:text-blue-400 transition-colors" href="#">Integrations</a>
+<a class="text-slate-500 text-sm hover:text-blue-400 transition-colors" href="#">Solutions</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-white text-sm font-bold">Company</span>
+<a class="text-slate-500 text-sm hover:text-blue-400 transition-colors" href="#">Pricing</a>
+<a class="text-slate-500 text-sm hover:text-blue-400 transition-colors" href="#">Privacy</a>
+<a class="text-slate-500 text-sm hover:text-blue-400 transition-colors" href="#">Terms</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-white text-sm font-bold">Social</span>
+<a class="text-slate-500 text-sm hover:text-blue-400 transition-colors" href="#">Twitter</a>
+<a class="text-slate-500 text-sm hover:text-blue-400 transition-colors" href="#">LinkedIn</a>
+<a class="text-slate-500 text-sm hover:text-blue-400 transition-colors" href="#">GitHub</a>
+</div>
+</div>
+</footer>
+</body></html>

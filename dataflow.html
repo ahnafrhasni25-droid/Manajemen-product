@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DataFlow | Executive Overview</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-secondary-container": "#a4b6f5",
+                "on-error-container": "#ffdad6",
+                "on-secondary": "#182d63",
+                "inverse-surface": "#d7e3fc",
+                "surface-container-highest": "#2a3548",
+                "secondary-container": "#33467e",
+                "surface-container-lowest": "#030e20",
+                "surface-container-high": "#1f2a3d",
+                "error-container": "#93000a",
+                "primary": "#b4c5ff",
+                "on-tertiary": "#581e00",
+                "tertiary-container": "#bc4800",
+                "on-error": "#690005",
+                "on-primary-container": "#eeefff",
+                "on-background": "#d7e3fc",
+                "on-primary-fixed": "#00174b",
+                "background": "#071325",
+                "surface-container": "#142032",
+                "surface-tint": "#b4c5ff",
+                "secondary-fixed": "#dbe1ff",
+                "on-surface": "#d7e3fc",
+                "tertiary-fixed": "#ffdbcd",
+                "on-primary-fixed-variant": "#003ea8",
+                "tertiary": "#ffb596",
+                "primary-fixed": "#dbe1ff",
+                "surface": "#071325",
+                "secondary-fixed-dim": "#b4c5ff",
+                "outline-variant": "#434655",
+                "error": "#ffb4ab",
+                "surface-bright": "#2e394d",
+                "inverse-primary": "#0053db",
+                "surface-dim": "#071325",
+                "outline": "#8d90a0",
+                "on-tertiary-container": "#ffede6",
+                "on-tertiary-fixed-variant": "#7d2d00",
+                "primary-container": "#2563eb",
+                "on-secondary-fixed-variant": "#31447b",
+                "tertiary-fixed-dim": "#ffb596",
+                "on-surface-variant": "#c3c6d7",
+                "surface-variant": "#2a3548",
+                "primary-fixed-dim": "#b4c5ff",
+                "on-tertiary-fixed": "#360f00",
+                "surface-container-low": "#101c2e",
+                "on-primary": "#002a78",
+                "inverse-on-surface": "#253144",
+                "on-secondary-fixed": "#00174b",
+                "secondary": "#b4c5ff"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "fontFamily": {
+                "headline": ["Manrope"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<link rel="stylesheet" href="css/style.css">
+  </head>
+<body class="bg-background text-on-background font-body select-none">
+<!-- TopAppBar Shell -->
+<header class="w-full top-0 sticky z-40 bg-[#071325] flex justify-between items-center px-8 py-4 h-16">
+<div class="flex items-center gap-4">
+<button class="text-on-surface hover:bg-[#1F2A3D] transition-colors duration-300 p-2 rounded-lg active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="text-xl font-extrabold tracking-tighter text-white font-headline">DataFlow</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="text-right hidden md:block">
+<p class="text-xs font-bold text-white">Alex Rivers</p>
+<p class="text-[10px] text-on-surface-variant">Principal Architect</p>
+</div>
+<img alt="User profile avatar" class="w-10 h-10 rounded-full border-2 border-primary-container" data-alt="Close-up professional portrait of a tech professional in soft cinematic studio lighting with dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCluelHAlNSmlMF0ykCvrvIyqHFX4p-kHwsn7Pwyjgxk_1nvwiyt8TBt0N9TrqGHeqCuJR_U9GqkC5bjeqfwW94lPjZ-CyuQl2ITzgOCKoA_nNh9hc7t__k4BbS7PbrN0DFo_uFcSVxWxDhuccKnT13xTwOhRla0RTTdMb0lBCXfiCHp09mm_Xye7Be2m-vmT2s-dmq8jcRx02ftnkT3mu2E0MgcPTfne7-8QwlvukNGg1W_JdKxO3ktdTke5fSqknyT1i3GlexXc1l"/>
+</div>
+</header>
+<main class="pb-24 px-6 md:px-12 max-w-7xl mx-auto overflow-x-hidden">
+<!-- Executive Overview Summary -->
+<section class="mt-8">
+<div class="flex justify-between items-end mb-6">
+<div>
+<span class="text-primary font-bold text-xs uppercase tracking-[0.2em] mb-1 block">System Overview</span>
+<h2 class="text-3xl font-headline font-extrabold text-white">Executive Overview</h2>
+</div>
+<div class="flex items-center gap-2 px-3 py-1.5 bg-surface-container-low rounded-full">
+<div class="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_#2563eb]"></div>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Live Engine</span>
+</div>
+</div>
+<!-- Metrics Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- Revenue Card -->
+<div class="bg-surface-container-low p-6 rounded-xl transition-all duration-300 hover:bg-[#1F2A3D]">
+<div class="flex justify-between items-start mb-4">
+<p class="text-on-surface-variant text-xs font-medium">Total Revenue</p>
+<span class="text-primary material-symbols-outlined text-lg" data-icon="payments">payments</span>
+</div>
+<div class="flex items-baseline gap-2 mb-4">
+<span class="text-2xl font-headline font-bold text-white">$2.4M</span>
+<span class="text-xs text-green-400 font-bold">+12.5%</span>
+</div>
+<div class="h-12 w-full flex items-end gap-1">
+<!-- Mock Sparkline -->
+<div class="flex-1 bg-primary/20 h-4 rounded-sm"></div>
+<div class="flex-1 bg-primary/20 h-6 rounded-sm"></div>
+<div class="flex-1 bg-primary/20 h-5 rounded-sm"></div>
+<div class="flex-1 bg-primary/20 h-8 rounded-sm"></div>
+<div class="flex-1 bg-primary/20 h-7 rounded-sm"></div>
+<div class="flex-1 bg-primary h-12 rounded-sm shadow-[0_-4px_12px_rgba(37,99,235,0.3)]"></div>
+</div>
+</div>
+<!-- Events Card -->
+<div class="bg-surface-container-low p-6 rounded-xl transition-all duration-300 hover:bg-[#1F2A3D]">
+<div class="flex justify-between items-start mb-4">
+<p class="text-on-surface-variant text-xs font-medium">Data Events</p>
+<span class="text-primary material-symbols-outlined text-lg" data-icon="database">database</span>
+</div>
+<div class="flex items-baseline gap-2 mb-4">
+<span class="text-2xl font-headline font-bold text-white">842.1k</span>
+<span class="text-xs text-primary font-bold">Stable</span>
+</div>
+<div class="h-12 w-full flex items-end gap-1">
+<div class="flex-1 bg-primary/40 h-8 rounded-sm"></div>
+<div class="flex-1 bg-primary/40 h-7 rounded-sm"></div>
+<div class="flex-1 bg-primary/40 h-8 rounded-sm"></div>
+<div class="flex-1 bg-primary/40 h-9 rounded-sm"></div>
+<div class="flex-1 bg-primary/40 h-8 rounded-sm"></div>
+<div class="flex-1 bg-primary h-8 rounded-sm"></div>
+</div>
+</div>
+<!-- Nodes Card -->
+<div class="bg-surface-container-low p-6 rounded-xl transition-all duration-300 hover:bg-[#1F2A3D]">
+<div class="flex justify-between items-start mb-4">
+<p class="text-on-surface-variant text-xs font-medium">Active Nodes</p>
+<span class="text-primary material-symbols-outlined text-lg" data-icon="hub">hub</span>
+</div>
+<div class="flex items-baseline gap-2 mb-4">
+<span class="text-2xl font-headline font-bold text-white">128</span>
+<span class="text-xs text-on-error font-bold bg-error/20 px-1 rounded">-2</span>
+</div>
+<div class="h-12 w-full flex items-end gap-1">
+<div class="flex-1 bg-error/20 h-10 rounded-sm"></div>
+<div class="flex-1 bg-error/20 h-10 rounded-sm"></div>
+<div class="flex-1 bg-error/20 h-12 rounded-sm"></div>
+<div class="flex-1 bg-error/20 h-9 rounded-sm"></div>
+<div class="flex-1 bg-error/20 h-10 rounded-sm"></div>
+<div class="flex-1 bg-error/60 h-7 rounded-sm"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Central Data Insights Section -->
+<section class="mt-12">
+<div class="bg-surface-container rounded-2xl p-8 overflow-hidden relative group">
+<div class="absolute top-0 right-0 p-8">
+<button class="bg-primary-container text-white px-4 py-2 rounded-lg font-bold text-xs flex items-center gap-2 hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-sm" data-icon="file_download">file_download</span>
+                        Export Report
+                    </button>
+</div>
+<div class="mb-10">
+<h3 class="text-2xl font-headline font-bold text-white mb-2">Data Insights</h3>
+<p class="text-on-surface-variant text-sm max-w-md">Proprietary neural analysis of system throughput across all global clusters.</p>
+</div>
+<!-- Graphic Visualization Area -->
+<div class="relative h-64 w-full bg-surface-container-low rounded-xl flex items-center justify-center overflow-hidden border border-white/5">
+<div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 2px 2px, #2563EB 1px, transparent 0); background-size: 24px 24px;"></div>
+<!-- SVG Area Chart Concept -->
+<svg class="w-full h-full px-4" preserveaspectratio="none" viewbox="0 0 400 150">
+<defs>
+<lineargradient id="chartGradient" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:#2563EB;stop-opacity:0.4"></stop>
+<stop offset="100%" style="stop-color:#2563EB;stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path d="M0,150 L0,120 C40,110 80,140 120,100 C160,60 200,80 240,40 C280,0 320,50 360,20 L400,30 L400,150 Z" fill="url(#chartGradient)"></path>
+<path d="M0,120 C40,110 80,140 120,100 C160,60 200,80 240,40 C280,0 320,50 360,20 L400,30" fill="none" stroke="#2563EB" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+<!-- Tooltip Marker -->
+<div class="absolute top-[40px] left-[60%] flex flex-col items-center">
+<div class="w-3 h-3 bg-white rounded-full border-4 border-primary shadow-[0_0_15px_#2563eb]"></div>
+<div class="mt-2 glass-panel p-2 rounded-lg border border-white/10 text-[10px]">
+<p class="text-on-surface-variant">Peak Throughput</p>
+<p class="text-white font-bold">1.2 TB/s</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Actions & Anomalies (Asymmetric Layout) -->
+<div class="mt-12 grid grid-cols-1 md:grid-cols-5 gap-8">
+<!-- Recent Anomalies -->
+<div class="md:col-span-3">
+<div class="flex items-center gap-3 mb-6">
+<h4 class="text-xl font-headline font-bold text-white">Recent Anomalies</h4>
+<span class="bg-error-container text-on-error-container px-2 py-0.5 rounded text-[10px] font-bold">3 ACTIVE</span>
+</div>
+<div class="space-y-3">
+<!-- Anomaly Item -->
+<div class="flex items-center justify-between p-4 bg-surface-container-low rounded-xl group hover:bg-[#1F2A3D] transition-colors cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-error/10 flex items-center justify-center text-error">
+<span class="material-symbols-outlined" data-icon="warning">warning</span>
+</div>
+<div>
+<p class="text-white font-bold text-sm">Latency Spike: Cluster US-E1</p>
+<p class="text-on-surface-variant text-xs">Detected 4 mins ago • Impact High</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-white transition-colors" data-icon="chevron_right">chevron_right</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface-container-low rounded-xl group hover:bg-[#1F2A3D] transition-colors cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="cloud_off">cloud_off</span>
+</div>
+<div>
+<p class="text-white font-bold text-sm">Node 84 Disconnected</p>
+<p class="text-on-surface-variant text-xs">Detected 12 mins ago • Impact Low</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-white transition-colors" data-icon="chevron_right">chevron_right</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface-container-low rounded-xl group hover:bg-[#1F2A3D] transition-colors cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-on-secondary-container/10 flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined" data-icon="lock_reset">lock_reset</span>
+</div>
+<div>
+<p class="text-white font-bold text-sm">Unauthorized Access Attempt</p>
+<p class="text-on-surface-variant text-xs">Detected 45 mins ago • Blocked</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-white transition-colors" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Quick Actions Panel -->
+<div class="md:col-span-2">
+<h4 class="text-xl font-headline font-bold text-white mb-6">Quick Engine</h4>
+<div class="bg-primary-container p-6 rounded-2xl relative overflow-hidden group mb-4">
+<!-- Background Accent -->
+<div class="absolute -bottom-6 -right-6 w-32 h-32 bg-white/10 rounded-full blur-2xl group-hover:scale-125 transition-transform duration-700"></div>
+<h5 class="text-white font-headline font-extrabold text-lg mb-2">New Analysis</h5>
+<p class="text-blue-100 text-xs mb-6 opacity-80">Deploy custom neural filters to existing data streams.</p>
+<button class="w-full bg-white text-primary-container font-bold py-3 rounded-lg text-sm transition-all active:scale-95">
+                        Launch Studio
+                    </button>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex flex-col items-center justify-center gap-2 p-4 bg-surface-container-low rounded-xl hover:bg-[#1F2A3D] transition-all">
+<span class="material-symbols-outlined text-primary" data-icon="terminal">terminal</span>
+<span class="text-[10px] font-bold text-white uppercase tracking-widest">Logs</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-2 p-4 bg-surface-container-low rounded-xl hover:bg-[#1F2A3D] transition-all">
+<span class="material-symbols-outlined text-primary" data-icon="share">share</span>
+<span class="text-[10px] font-bold text-white uppercase tracking-widest">Share</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Navigation Shell Logic (BottomNavBar for Mobile) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 bg-[#071325]/70 backdrop-blur-xl border-t border-white/5 flex justify-around items-center px-6 pb-safe h-20 shadow-2xl">
+<button class="text-blue-500 bg-blue-500/10 rounded-xl p-3 scale-110 duration-300">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+</button>
+<button class="text-[#C3C6D7] p-3 hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined" data-icon="bar_chart">bar_chart</span>
+</button>
+<button class="text-[#C3C6D7] p-3 hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-[#C3C6D7] p-3 hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</nav>
+<!-- Side Navigation Drawer for Desktop -->
+<aside class="hidden md:flex fixed inset-y-0 left-0 z-50 w-72 bg-[#101C2E] shadow-[24px_0_48px_rgba(7,19,37,0.08)] flex-col p-6 space-y-4">
+<div class="mb-8 flex items-center gap-3">
+<div class="w-10 h-10 bg-primary-container rounded-lg flex items-center justify-center text-white font-black text-xl">DF</div>
+<span class="text-2xl font-black text-white font-headline">DataFlow</span>
+</div>
+<div class="flex items-center gap-3 mb-10 p-2">
+<img alt="User profile" class="w-12 h-12 rounded-xl object-cover" data-alt="Professional tech worker portrait in modern office setting with neon accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANCLflPZGrIUr7842lQQx2yNxhh131OUfhz5D2WHaRn6GkcnplmAS5x8qGpC7lDQ3hBf7UzMqJEOV-xYQOGiIrzcmkJ9RNrdn63_WYJ5ccsOnVqwsxvMer9rRmf8ot5_W9INMJSsp4ll4UeapqoTUfauVakn6GYHQsNCLjlpzi-V2pRaTdCMCGDrhAYeYS-s1LrsZ7MDLzmIdiqklmj-dvLJUwI6zeJZXr77zcArBi2EGuoOsPjCJPP2th4cW203iub2aNE4mICHqq"/>
+<div>
+<p class="text-white font-bold text-sm font-body">Alex Rivers</p>
+<p class="text-[#C3C6D7] text-[10px] uppercase tracking-tighter">Principal Architect</p>
+</div>
+</div>
+<div class="space-y-1 flex-1">
+<button class="w-full flex items-center gap-4 px-4 py-3 text-white font-bold bg-gradient-to-r from-blue-600/20 to-transparent rounded-lg transition-all duration-300 ease-out font-['Inter'] text-sm">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                Executive Overview
+            </button>
+<button class="w-full flex items-center gap-4 px-4 py-3 text-[#C3C6D7] hover:bg-[#1F2A3D] hover:text-white rounded-lg transition-all duration-300 ease-out font-['Inter'] text-sm">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+                Data Streams
+            </button>
+<button class="w-full flex items-center gap-4 px-4 py-3 text-[#C3C6D7] hover:bg-[#1F2A3D] hover:text-white rounded-lg transition-all duration-300 ease-out font-['Inter'] text-sm">
+<span class="material-symbols-outlined" data-icon="error_med">error_med</span>
+                Anomaly Detection
+            </button>
+<button class="w-full flex items-center gap-4 px-4 py-3 text-[#C3C6D7] hover:bg-[#1F2A3D] hover:text-white rounded-lg transition-all duration-300 ease-out font-['Inter'] text-sm">
+<span class="material-symbols-outlined" data-icon="insights">insights</span>
+                Predictive Models
+            </button>
+<button class="w-full flex items-center gap-4 px-4 py-3 text-[#C3C6D7] hover:bg-[#1F2A3D] hover:text-white rounded-lg transition-all duration-300 ease-out font-['Inter'] text-sm">
+<span class="material-symbols-outlined" data-icon="settings_input_component">settings_input_component</span>
+                System Health
+            </button>
+</div>
+<div class="pt-6 border-t border-white/5">
+<div class="bg-surface-container-highest/30 p-4 rounded-xl">
+<p class="text-[10px] text-[#C3C6D7] mb-2 uppercase font-bold tracking-widest">Storage Status</p>
+<div class="w-full h-1.5 bg-background rounded-full mb-2">
+<div class="w-[75%] h-full bg-primary rounded-full shadow-[0_0_8px_#2563eb]"></div>
+</div>
+<p class="text-[10px] text-white">12.4 TB / 16 TB used</p>
+</div>
+</div>
+</aside>
+<!-- FAB Action (Contextual to Dashboard) -->
+<button class="fixed bottom-24 right-8 md:bottom-12 md:right-12 w-14 h-14 bg-primary-container text-white rounded-full flex items-center justify-center shadow-[0_8px_24px_rgba(37,99,235,0.4)] hover:scale-110 active:scale-95 transition-all z-40">
+<span class="material-symbols-outlined text-2xl" data-icon="add">add</span>
+</button>
+</body></html>

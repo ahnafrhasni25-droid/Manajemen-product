@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#93000a",
+                        "surface-container-low": "#101c2e",
+                        "on-secondary": "#182d63",
+                        "outline-variant": "#434655",
+                        "surface-container": "#142032",
+                        "surface-variant": "#2a3548",
+                        "on-error-container": "#ffdad6",
+                        "on-primary": "#002a78",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "secondary-fixed-dim": "#b4c5ff",
+                        "on-tertiary-fixed": "#360f00",
+                        "on-surface-variant": "#c3c6d7",
+                        "surface-tint": "#b4c5ff",
+                        "secondary-fixed": "#dbe1ff",
+                        "on-tertiary-container": "#ffede6",
+                        "surface-container-highest": "#2a3548",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "inverse-surface": "#d7e3fc",
+                        "inverse-primary": "#0053db",
+                        "inverse-on-surface": "#253144",
+                        "on-error": "#690005",
+                        "primary": "#b4c5ff",
+                        "on-secondary-fixed-variant": "#31447b",
+                        "surface-container-high": "#1f2a3d",
+                        "primary-container": "#2563eb",
+                        "on-background": "#d7e3fc",
+                        "surface-container-lowest": "#030e20",
+                        "on-surface": "#d7e3fc",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "surface-dim": "#071325",
+                        "on-primary-container": "#eeefff",
+                        "tertiary": "#ffb596",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "error": "#ffb4ab",
+                        "on-tertiary": "#581e00",
+                        "outline": "#8d90a0",
+                        "secondary": "#b4c5ff",
+                        "tertiary-container": "#bc4800",
+                        "background": "#071325",
+                        "secondary-container": "#33467e",
+                        "on-secondary-fixed": "#00174b",
+                        "surface": "#071325",
+                        "tertiary-fixed": "#ffdbcd",
+                        "on-primary-fixed": "#00174b",
+                        "surface-bright": "#2e394d",
+                        "primary-fixed": "#dbe1ff",
+                        "on-secondary-container": "#a4b6f5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-surface overflow-hidden">
+<!-- Sidebar Navigation -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-[#071325] border-r border-slate-800/30 flex flex-col py-8 z-50">
+<div class="px-8 mb-12">
+<h1 class="text-xl font-black text-white font-manrope tracking-tight">DataFlow</h1>
+<p class="text-[10px] text-slate-500 tracking-[0.2em] uppercase mt-1">Enterprise Analytics</p>
+</div>
+<nav class="flex-1 space-y-1 px-4">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-slate-200 hover:bg-[#142032] transition-all duration-300 group rounded-lg" href="#">
+<span class="material-symbols-outlined text-lg">dashboard</span>
+<span class="font-manrope tracking-tight text-sm">Executive Overview</span>
+</a>
+<!-- Active State -->
+<a class="flex items-center gap-3 px-4 py-3 text-blue-500 font-bold border-r-2 border-blue-500 bg-gradient-to-r from-blue-500/10 to-transparent group rounded-lg" href="#">
+<span class="material-symbols-outlined text-lg">waves</span>
+<span class="font-manrope tracking-tight text-sm">Data Streams</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-slate-200 hover:bg-[#142032] transition-all duration-300 group rounded-lg" href="#">
+<span class="material-symbols-outlined text-lg">query_stats</span>
+<span class="font-manrope tracking-tight text-sm">System Health</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-slate-200 hover:bg-[#142032] transition-all duration-300 group rounded-lg" href="#">
+<span class="material-symbols-outlined text-lg">settings</span>
+<span class="font-manrope tracking-tight text-sm">Settings</span>
+</a>
+</nav>
+<div class="px-6 mt-auto">
+<button class="w-full bg-primary-container text-on-primary-container py-3 rounded-lg font-manrope font-bold text-sm shadow-lg shadow-blue-600/20 active:scale-95 transition-transform">
+                Deploy Stream
+            </button>
+<div class="mt-8 space-y-4">
+<a class="flex items-center gap-3 px-4 text-slate-400 hover:text-white transition-colors text-xs" href="#">
+<span class="material-symbols-outlined text-sm">contact_support</span> Support
+                </a>
+<a class="flex items-center gap-3 px-4 text-slate-400 hover:text-white transition-colors text-xs" href="#">
+<span class="material-symbols-outlined text-sm">logout</span> Log Out
+                </a>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 min-h-screen bg-surface-dim relative overflow-y-auto">
+<!-- Top Bar -->
+<header class="flex items-center justify-between px-10 h-20 sticky top-0 bg-[#071325]/80 backdrop-blur-xl z-40">
+<div class="flex items-center gap-8">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 text-sm">search</span>
+<input class="bg-surface-container-highest border-none rounded-full pl-10 pr-6 py-2 text-sm text-on-surface-variant focus:ring-1 focus:ring-primary w-64 transition-all" placeholder="Search streams..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-slate-400 hover:text-white transition-colors"><span class="material-symbols-outlined">notifications</span></button>
+<button class="text-slate-400 hover:text-white transition-colors"><span class="material-symbols-outlined">help</span></button>
+<div class="h-8 w-8 rounded-full bg-surface-container-high overflow-hidden border border-slate-700">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="close-up portrait of a professional male tech executive with soft studio lighting and clean blurred background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA27pOOr7tVp646aXYcI-40zdDbBs5tVmp9RuZWze4tD4XaX1vrOVrj_slivjM3kt5AtMM_Z8OHkAdDB_J7JurAuuYqXHbYjy9xyoOyJRthtmw3JTRxBLXYTUfzkPDpe5Z4Wc86FPL7SESfV7DaDxfqHwVVXN4fR65v5PsC4N_yyi3Btm3hzHrlOaK4OzWPvxPNIh0oFom0kEzQu4LWAJmG7EFSM5aXOUYx9p55cGpeB9CVOV4yqBO9ODcdY2H-_Luu4lu-R-ZavEeU"/>
+</div>
+</div>
+</header>
+<!-- Page Header -->
+<section class="px-10 pt-8 pb-12">
+<div class="flex flex-col md:flex-row justify-between items-end gap-6">
+<div>
+<h2 class="text-4xl font-extrabold font-manrope tracking-tighter text-white mb-2">Data Streams</h2>
+<p class="text-on-surface-variant max-w-md font-body">Real-time processing engine for global enterprise telemetry.</p>
+</div>
+<div class="flex gap-12 items-center bg-surface-container-low p-6 rounded-xl">
+<div class="text-right">
+<p class="text-[10px] uppercase tracking-widest text-slate-500 font-bold mb-1">Total Throughput</p>
+<p class="text-2xl font-manrope font-black text-primary">42.8 <span class="text-sm font-normal text-slate-400">GB/s</span></p>
+</div>
+<div class="w-[1px] h-10 bg-slate-800"></div>
+<div class="text-right">
+<p class="text-[10px] uppercase tracking-widest text-slate-500 font-bold mb-1">Active Pipelines</p>
+<p class="text-2xl font-manrope font-black text-white">124</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Dashboard Content -->
+<div class="px-10 pb-20 grid grid-cols-12 gap-8">
+<!-- Visualization Canvas -->
+<div class="col-span-12 lg:col-span-9 space-y-8">
+<div class="bg-surface-container-low rounded-xl p-8 relative overflow-hidden h-[400px]">
+<div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none" style="background-image: linear-gradient(to right, #2563eb 1px, transparent 1px), linear-gradient(to bottom, #2563eb 1px, transparent 1px); background-size: 40px 40px;"></div>
+<div class="flex justify-between items-center mb-8 relative z-10">
+<h3 class="font-manrope font-bold text-lg flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-primary status-pulse"></span>
+                            Live Network Flow
+                        </h3>
+<div class="flex gap-2">
+<button class="px-3 py-1 text-xs rounded-md bg-surface-container-high text-white">1h</button>
+<button class="px-3 py-1 text-xs rounded-md text-slate-500 hover:bg-surface-container-high transition-colors">6h</button>
+<button class="px-3 py-1 text-xs rounded-md text-slate-500 hover:bg-surface-container-high transition-colors">24h</button>
+</div>
+</div>
+<!-- Placeholder for sophisticated Chart -->
+<div class="w-full h-64 relative mt-4">
+<svg class="w-full h-full" viewbox="0 0 1000 200">
+<defs>
+<lineargradient id="chartGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#2563eb" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="#2563eb" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<path d="M0,150 Q100,140 200,160 T400,120 T600,100 T800,140 T1000,80 L1000,200 L0,200 Z" fill="url(#chartGradient)"></path>
+<path d="M0,150 Q100,140 200,160 T400,120 T600,100 T800,140 T1000,80" fill="none" stroke="#2563eb" stroke-linecap="round" stroke-width="3"></path>
+<circle class="animate-pulse" cx="200" cy="160" fill="#2563eb" r="4"></circle>
+<circle class="animate-pulse" cx="600" cy="100" fill="#2563eb" r="4"></circle>
+<circle class="animate-pulse" cx="1000" cy="80" fill="#2563eb" r="4"></circle>
+</svg>
+<div class="absolute bottom-0 left-0 w-full flex justify-between text-[10px] text-slate-600 font-bold pt-4 border-t border-slate-800/50">
+<span>09:00 AM</span>
+<span>10:00 AM</span>
+<span>11:00 AM</span>
+<span>12:00 PM</span>
+<span>01:00 PM</span>
+<span>02:00 PM</span>
+</div>
+</div>
+</div>
+<!-- Pipelines Table Area -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden">
+<div class="px-8 py-6 border-b border-slate-800/30 flex justify-between items-center">
+<h3 class="font-manrope font-bold text-lg">Active Pipelines</h3>
+<button class="text-primary text-sm font-semibold hover:underline">View All</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container/50">
+<th class="px-8 py-4 text-[10px] uppercase tracking-widest text-slate-500 font-bold">Stream Identity</th>
+<th class="px-8 py-4 text-[10px] uppercase tracking-widest text-slate-500 font-bold">Status</th>
+<th class="px-8 py-4 text-[10px] uppercase tracking-widest text-slate-500 font-bold">Throughput</th>
+<th class="px-8 py-4 text-[10px] uppercase tracking-widest text-slate-500 font-bold text-right">Trend</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-800/20">
+<tr class="hover:bg-surface-container-high transition-colors group">
+<td class="px-8 py-6">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-blue-500/10 rounded-lg">
+<span class="material-symbols-outlined text-primary text-sm">api</span>
+</div>
+<div>
+<p class="text-white font-manrope font-semibold text-sm">User Activity API</p>
+<p class="text-xs text-slate-500">us-east-1 • kinesis-prod</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-6">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-green-500/10 text-green-400 uppercase tracking-tight">
+<span class="w-1.5 h-1.5 rounded-full bg-green-400"></span> Active
+                                        </span>
+</td>
+<td class="px-8 py-6">
+<p class="text-white font-manrope font-bold text-sm">12.4 GB/s</p>
+</td>
+<td class="px-8 py-6 text-right">
+<div class="inline-block h-8 w-24">
+<svg class="w-full h-full" viewbox="0 0 100 30">
+<path d="M0,25 L10,20 L20,22 L30,15 L40,18 L50,10 L60,12 L70,5 L80,8 L90,2 L100,5" fill="none" stroke="#2563eb" stroke-width="2"></path>
+</svg>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high transition-colors group">
+<td class="px-8 py-6">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-blue-500/10 rounded-lg">
+<span class="material-symbols-outlined text-primary text-sm">database</span>
+</div>
+<div>
+<p class="text-white font-manrope font-semibold text-sm">Inventory Ledger</p>
+<p class="text-xs text-slate-500">eu-central-1 • db-replica</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-6">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-green-500/10 text-green-400 uppercase tracking-tight">
+<span class="w-1.5 h-1.5 rounded-full bg-green-400"></span> Active
+                                        </span>
+</td>
+<td class="px-8 py-6">
+<p class="text-white font-manrope font-bold text-sm">8.1 GB/s</p>
+</td>
+<td class="px-8 py-6 text-right">
+<div class="inline-block h-8 w-24">
+<svg class="w-full h-full" viewbox="0 0 100 30">
+<path d="M0,15 L20,18 L40,12 L60,15 L80,10 L100,12" fill="none" stroke="#2563eb" stroke-width="2"></path>
+</svg>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high transition-colors group">
+<td class="px-8 py-6">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-slate-800 rounded-lg">
+<span class="material-symbols-outlined text-slate-500 text-sm">sensors</span>
+</div>
+<div>
+<p class="text-white font-manrope font-semibold text-sm">Global Sensor Network</p>
+<p class="text-xs text-slate-500">global-edge • mqtt-mesh</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-6">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-slate-800 text-slate-400 uppercase tracking-tight">
+<span class="w-1.5 h-1.5 rounded-full bg-slate-500"></span> Standby
+                                        </span>
+</td>
+<td class="px-8 py-6">
+<p class="text-slate-500 font-manrope font-bold text-sm">0.0 GB/s</p>
+</td>
+<td class="px-8 py-6 text-right">
+<div class="inline-block h-8 w-24">
+<svg class="w-full h-full" viewbox="0 0 100 30">
+<line stroke="#434655" stroke-width="2" x1="0" x2="100" y1="15" y2="15"></line>
+</svg>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Controls Sidebar -->
+<div class="col-span-12 lg:col-span-3 space-y-6">
+<div class="bg-surface-container-low rounded-xl p-8 sticky top-28">
+<h3 class="font-manrope font-bold text-white mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">psychology</span>
+                        AI Flow Controls
+                    </h3>
+<div class="space-y-8">
+<!-- Control Item 1 -->
+<div class="flex items-center justify-between">
+<div>
+<p class="text-sm font-semibold text-white">Predictive Scaling</p>
+<p class="text-[10px] text-slate-500">Auto-adjust throughput based on AI forecast.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-high rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<!-- Control Item 2 -->
+<div class="flex items-center justify-between">
+<div>
+<p class="text-sm font-semibold text-white">Anomalous Scrubbing</p>
+<p class="text-[10px] text-slate-500">Filter data drifts and outliers in real-time.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-high rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<!-- Control Item 3 -->
+<div class="flex items-center justify-between">
+<div>
+<p class="text-sm font-semibold text-white">Auto-Heal Nodes</p>
+<p class="text-[10px] text-slate-500">Re-route traffic if regional lag exceeds 15ms.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-high rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+</div>
+<div class="mt-12 p-6 bg-surface-container-highest rounded-xl border border-blue-500/10">
+<h4 class="text-xs font-bold text-primary uppercase tracking-[0.15em] mb-3">System Load</h4>
+<div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[68%]"></div>
+</div>
+<div class="flex justify-between mt-2">
+<span class="text-[10px] text-slate-500">Node Cluster: 04</span>
+<span class="text-[10px] text-white font-bold">68% Capacity</span>
+</div>
+</div>
+</div>
+<div class="glass-panel p-8 rounded-xl relative overflow-hidden group">
+<img alt="Security Map" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-110 transition-transform duration-1000" data-alt="abstract digital connection network with flowing blue light lines on a dark technological background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuTs_f3GlUElfty-TxpGtdyFB0OPzMkd6kCNn8ETEbmCfweD4d16J5NeOy4rkLk5R-fBPnN7QosBncNhoGfPyiufWJ5E6D54yD0Du4lze0R1SpoxFEUHXr6FDiylp59r04pOZ1or-UZPD9ceR5Vsr39YoPi6sj1oVY9mh0tICnv3fWntBukKrn0LHJPVP6qF9AGuwIc9KdBTF24pldHCz3nFJ2xFHqRJmt22bwF3ybFCjbRjBW7Ovx7sdi2LJ4DvNHjpDOXW2lONVS"/>
+<div class="relative z-10">
+<p class="text-[10px] font-bold text-primary uppercase mb-2">Global Coverage</p>
+<h3 class="font-manrope font-bold text-white mb-4">Security Protocol Delta-9</h3>
+<p class="text-xs text-slate-300 leading-relaxed">End-to-end encryption is currently enforced across all active nodes.</p>
+<button class="mt-6 text-white bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg text-[10px] font-bold uppercase transition-colors">Audit Logs</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>
